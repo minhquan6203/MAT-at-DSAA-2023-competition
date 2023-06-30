@@ -1,0 +1,80 @@
+#config for Mutual Attention Transformer model
+
+base:
+  use_cuda: True
+
+data:
+  dataset_folder: data
+  train_dataset: train.csv
+  val_dataset: dev.csv
+  test_dataset: test.csv
+  use_id: True # if True model can use the id and passages of the nodes, if False model only use passage of the nodes
+
+tokenizer:
+  padding: max_length
+  max_length: 64
+  truncation: True
+  return_token_type_ids: True
+  return_attention_mask: True
+
+text_embedding:
+  type: pretrained #we have 3 types of text embedding: pretrained, tf_idf, count_vec
+  text_encoder: bert-base-uncased
+  freeze: True # if true all params of pretrained language will be freezed
+  d_features: 768 #default hidden dim of pretrained language
+  d_model: 128 # set dim of features vector equal dim of model (=intermediate_dims)
+  dropout: 0.2
+
+attention:
+  layers: 3
+  heads: 8
+  d_model: 128
+  d_key: 64
+  d_value: 64
+  d_ff: 1024
+  d_feature: 1024
+  dropout: 0.2
+  use_aoa: False
+
+encoder:
+  type: co # co-attention encoder
+  d_model: 128
+  layers: 3
+
+model:
+  name: dsaa_2023  # Custom name for the model
+  type_model: pat
+  intermediate_dims: 128 # dim of model
+  dropout: 0.2
+
+early_stoping:
+  early_stopping_patience: 5
+
+train:
+  output_dir: /content/drive/MyDrive/checkpoint
+  seed: 12345
+  num_train_epochs: 100
+  learning_rate: 3.0e-5
+  weight_decay: 0.0
+  warmup_ratio: 0.0
+  warmup_steps: 0
+  evaluation_strategy: epoch
+  logging_strategy: epoch
+  save_strategy: epoch
+  save_total_limit: 2 
+  metric_for_best_model: eval_f1
+  per_device_train_batch_size: 150
+  per_device_eval_batch_size: 150
+  remove_unused_columns: False
+  dataloader_num_workers: 2
+  load_best_model_at_end: True
+
+
+metrics:
+  metrics_folder: metrics
+  metrics_file: metrics.json
+
+inference:
+  checkpoint: checkpoint-756
+  test_dataset: /content/data/test.csv
+  batch_size: 1024
