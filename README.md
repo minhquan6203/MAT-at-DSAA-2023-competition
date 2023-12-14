@@ -11,7 +11,7 @@ The Data Science and Advanced Analytics ([DSAA](https://conferences.sigappfr.org
 
 Please visit our [paper](https://ieeexplore.ieee.org/abstract/document/10302519?fbclid=IwAR0CRBigjpgHZujvCKzk_CipWb1TBnN1rhIGpHDvIDThXgepm_sl7Mnc16s) for more infomation.
 
-![Overview our MAT](pic\MAT_method.png)
+![Overview our MAT](pic/MAT_method.png)
 
 Author:
 - Quan Van Nguyen (21521333@gm.uit.edu.vn)
@@ -19,3 +19,5 @@ Author:
 - Huy Quang Pham (21521917@gm.uit.edu.vn)
 - Thang Bao Kien Nguyen (21522163@gm.uit.edu.vn)
 - Nghia Hieu Nguyen (19520178@gm.uit.edu.vn)
+
+December 14, 2023
