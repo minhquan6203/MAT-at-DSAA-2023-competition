@@ -16,8 +16,8 @@ Please visit our [paper](https://ieeexplore.ieee.org/abstract/document/10302519?
 Author:
 - Quan Van Nguyen (21521333@gm.uit.edu.vn)
 - Dan Quang Tran (21521917@gm.uit.edu.vn)
-- Huy Quang Pham (21521917@gm.uit.edu.vn)
-- Thang Bao Kien Nguyen (21522163@gm.uit.edu.vn)
+- Huy Quang Pham (21522163@gm.uit.edu.vn)
+- Thang Bao Kien Nguyen (21521432@gm.uit.edu.vn)
 - Nghia Hieu Nguyen (19520178@gm.uit.edu.vn)
 
 December 14, 2023
